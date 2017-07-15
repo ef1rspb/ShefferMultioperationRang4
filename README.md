@@ -12,5 +12,5 @@ Scientific director: [N. A. Peryazev](http://www.mathnet.ru/rus/person27879)
 
 ![equation](https://latex.codecogs.com/gif.latex?%5C%5C%20%5C%5C%20%5Ctext%7BAn%20multioperation%20called%20Sheffer%20if%20it%20generates%20the%20whole%20algebra.%7D%20%5C%5C%20%5Ctext%7BIn%20the%20largest%20algebra%20of%20unary%20multioperations%20of%20rank%202%20there%20are%20no%7D%20%5C%5C%20%5Ctext%7BSheffer%20operations%2C%20but%20of%20rank%20of%203%20exists%2012%20operations%3A%20%7D%20%5C%5C%20%28243%29%2C%20%28251%29%2C%20%28253%29%2C%20%28413%29%2C%20%28452%29%2C%20%28453%29%2C%20%28612%29%2C%20%28613%29%2C%20%28641%29%2C%20%28643%29%2C%20%28651%29%2C%20%28652%29.%20%5C%5C%20%5Ctext%7BIn%20my%20work%20I%20found%20816%20Sheffer%20operations%20in%20full%20algebra%20of%20unary%20multioperations%20of%20rank%204.%7D)
 
-[1] Казимиров А. С., Перязев Н. А. Алгебры унарных мультиопераций // Тезисы докладов международной конференции Мальцевские чтения, Новосибирский государственный университет, 2013. — С. 156.
+[1] [A. S. Kazimirov, N. A. Peryazev Algebras of unary multioperations // Mal'tsev Meeting , Novosibirsk state university, 2013. — P. 156.](http://math.nsc.ru/conference/malmeet/13/maltsev13.pdf)
 
