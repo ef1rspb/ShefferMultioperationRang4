@@ -5,7 +5,7 @@ This is my graduate bachelor's project at the [Saint Petersburg Electrotechnical
 Scientific director: [N. A. Peryazev](http://www.mathnet.ru/rus/person27879)
 
 Let A - finite set, k = |A|
-Let f: A \to A - operation
+Let f: ![equation](https://latex.codecogs.com/gif.latex?A%20%5Crightarrow%202%5E%7BA%7D) - operation
     g: A \to 2^A - multioperation
 
 
