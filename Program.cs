@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -19,12 +19,13 @@ namespace ShefferMultioperationRank4
         private static void Main(string[] args)
         {
             // generate all multioperations of rank 4 (count = 2^16 = 65536)
-            var gen5 = (from a in Enumerable.Range(1, 32)
-                        from b in Enumerable.Range(1, 32)
-                        from c in Enumerable.Range(1, 32)
-                        from d in Enumerable.Range(1, 32)
-                        from e in Enumerable.Range(1, 32)
-                        select new Multioperation5(a, b, c, d, e)).ToArray();
+            var gen6 = (from a in Enumerable.Range(1, 2)
+                        from b in Enumerable.Range(1, 64)
+                        from c in Enumerable.Range(1, 64)
+                        from d in Enumerable.Range(1, 64)
+                        from e in Enumerable.Range(1, 64)
+                        from f in Enumerable.Range(1, 64)
+                        select new Multioperation6(a, b, c, d, e, f)).ToArray();
 
             // contents multioperation f and number of elements
             // in corresponging algebra of unary multioperations
@@ -64,13 +65,19 @@ namespace ShefferMultioperationRank4
             //finished[0] = true;
 
             //Console.ReadKey();
+            Dictionary<Multioperation6, Multioperation6> dict = new Dictionary<Multioperation6, Multioperation6>();
+
             int count = 0;
-            foreach (Multioperation5 op in gen5)
+            foreach (Multioperation6 op in gen6)
             {
-                var isFirst = ArrSet5.IsFifthType(op);
+                //if (dict.ContainsKey(op)) {
+                //    continue;
+                //}
+                var isFirst = ArrSet6.IsFirstType(op);
                 if (isFirst)
                 {
                     count++;
+                    //dict[!op] = op;
                     Console.WriteLine("{0}", op);
                 }
             }
