@@ -98,5 +98,124 @@ namespace ShefferMultioperationRank4
                 }
                 return set.Count;
             }
-        } 
+
+        public static bool IsFirstType(Multioperation4 op)
+        {
+            var set = new ArrSet4(op);
+            if (set.Count <= 3 || set.Count > 4) return false;
+
+            var first = op & Multioperation4.E;
+            if (first != Multioperation4.E)
+            {
+                return false;
+            }
+            var mu = !op;
+            if (mu != op)
+            {
+                return false;
+            }
+            var op2 = op * op;
+            if (op2 != op)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsSecondType(Multioperation4 op)
+        {
+            var set = new ArrSet4(op);
+            if (set.Count <= 3 || set.Count > 4) return false;
+
+            var first = op & Multioperation4.E;
+            if (first != Multioperation4.E)
+            {
+                return false;
+            }
+            var mu = !op;
+            if (mu != op)
+            {
+                return false;
+            }
+            var op2 = op * op;
+            if (op2 != Multioperation4.All)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsThirdType(Multioperation4 op)
+        {
+            var first = op & Multioperation4.E;
+            if (first != Multioperation4.E)
+            {
+                return false;
+            }
+            var second = (!op) & op;
+            if (second != Multioperation4.E)
+            {
+                return false;
+            }
+            var third1 = op * (!op);
+            var third2 = (!op) * op;
+            if (third1 != Multioperation4.All || third2 != Multioperation4.All)
+            {
+                return false;
+            }
+
+            var fourth = op * op;
+            if (fourth != op)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsFourthType(Multioperation4 op)
+        {
+            var first = op & Multioperation4.E;
+            if (first != Multioperation4.E)
+            {
+                return false;
+            }
+            var second = (!op) & op;
+            if (second != Multioperation4.E)
+            {
+                return false;
+            }
+            var third1 = op * (!op);
+            var third2 = (!op) * op;
+            if (third1 != Multioperation4.All || third2 != Multioperation4.All)
+            {
+                return false;
+            }
+
+            var fourth = op * op;
+            if (fourth != Multioperation4.All)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsFifthType(Multioperation4 op)
+        {
+            var first = op & Multioperation4.E;
+            if (first != Multioperation4.Zero)
+            {
+                return false;
+            }
+            if (!op != op)
+            {
+                return false;
+            }
+            var third = op * op;
+            if (third != Multioperation4.All)
+            {
+                return false;
+            }
+            return true;
+        }
+    } 
 }
